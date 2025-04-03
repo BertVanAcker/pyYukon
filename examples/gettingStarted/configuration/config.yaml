@@ -1,0 +1,46 @@
+logger:
+  endpoints:
+    - endpoint:
+        type: "logging"
+        name: "RemoteLog"
+        class: "LogMessage"
+        topic: "/RemoteLog"
+        QoS: 10
+
+YUKON_COMM_CONFIG:
+  board:
+    - property:
+        type: "data"
+        name: "Voltage_in"
+        topic: "/YUKON/Vin"
+        QoS: 10
+  modules:
+    - module:
+        type: "BigMotor"
+        name: "BigMotor_M1"
+        feedbacks:
+          - feedback:
+            name: "rpm"
+            topic: "/YUKON/Modules/BigMotor_M1/RPM"
+            QoS: 10
+          - feedback:
+            name: "current"
+            topic: "/YUKON/Modules/BigMotor_M1/I"
+            QoS: 10
+          - feedback:
+            name: "voltage"
+            topic: "/YUKON/Modules/BigMotor_M1/V"
+            QoS: 10
+          - feedback:
+            name: "power"
+            topic: "/YUKON/Modules/BigMotor_M1/P"
+            QoS: 10
+
+
+
+mqtt_broker: "localhost"
+mqtt_port: 1883
+
+logging:
+  level: "DEBUG"
+  file: "logs/yukon.log"
