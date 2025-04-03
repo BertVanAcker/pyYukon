@@ -11,3 +11,6 @@ class motor1_messages:
 class motor2_messages:
     TOPIC_MOTOR_ENABLE = "YUKON/MOTOR2/ENABLE"
     TOPIC_MOTOR_SPEED = "YUKON/MOTOR2/SPEED"
+
+class servo1_messages:
+    TOPIC_SERVO_ANGLE = "YUKON/SERVO1/ANGLE"

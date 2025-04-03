@@ -1,3 +1,4 @@
+from pyYukon.devices.serialServo import serial_servo
 from pyYukon.logger.logger import *
 from pyYukon.communicator.communicator import *
 from pyYukon.utils.constants import *
@@ -27,7 +28,7 @@ class yukon():
 
         # --- YUKON MODULES ---
         self.motor1 = encoder_motor(ID="MOTOR1",logger=self.logger,communicator=self.communicator,steps_per_second=10,verbose=self.verbose)
-
+        self.servo1 = serial_servo(ID="SERVO1",logger=self.logger,communicator=self.communicator,verbose=self.verbose)
         # --- ACTIVATE COMMUNCATION ---
 
 
