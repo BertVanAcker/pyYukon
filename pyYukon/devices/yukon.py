@@ -31,6 +31,13 @@ class yukon():
         self.servo1 = serial_servo(ID="SERVO1",logger=self.logger,communicator=self.communicator,verbose=self.verbose)
         # --- ACTIVATE COMMUNCATION ---
 
+        # --- ACTIVATE PERIODIC FEEDBACK ---
+        if 'YUKON_COMM_CONFIG' in self.config:
+            period = self.config['YUKON_COMM_CONFIG']['active_monitoring']['period']
+        self.monitoring_thread = PeriodicThread(period, self._request_module_feedback)  # interval = 1 second
+
+
+
 
     # -------------------------- BOARD FUNCTIONS -------------------------------------
     def enable_main_output(self):
@@ -56,8 +63,19 @@ class yukon():
 
 
 
+    def _request_module_feedback(self):
+        """Request periodic feedback from all modules"""
+        self.motor1.retrieve_feedback()
+        self.servo1.retrieve_feedback()
 
+    def start(self):
+        """Start the active monitoring of the Yukon device"""
+        self.monitoring_thread.start()
 
+    def stop(self):
+        """Stop the active monitoring of the Yukon """
+        self.monitoring_thread.stop()
+        self.monitoring_thread.join()
 
 
 

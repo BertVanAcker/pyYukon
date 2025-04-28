@@ -8,6 +8,8 @@ logger:
         QoS: 10
 
 YUKON_COMM_CONFIG:
+  active_monitoring:
+    period: 1.0
   board:
     - property:
         type: "data"

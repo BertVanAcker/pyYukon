@@ -3547,3 +3547,425 @@
 2025-04-28 13:22:53,283 INFO Retrieved feedback from module: MOTOR1
 2025-04-28 13:22:53,810 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: OFF
 2025-04-28 13:22:53,810 INFO MOTOR1: disabled
+2025-04-28 13:33:36,277 INFO Yukon: logger initialized
+2025-04-28 13:33:36,305 INFO Subscribed to MQTT topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:33:36,305 INFO Subscribed to MQTT topic: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:33:36,306 INFO Registered callback for event: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:33:36,306 INFO Registered callback for event: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:33:36,306 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: ON
+2025-04-28 13:33:36,306 INFO MOTOR1: enabled
+2025-04-28 13:33:36,306 INFO Published to MQTT topic YUKON/MOTOR1/SPEED: 1.0
+2025-04-28 13:33:36,306 INFO MOTOR1: speed setpoint 1.0
+2025-04-28 13:33:36,306 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:36,307 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:36,307 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:36,307 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:37,306 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:37,306 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:37,307 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:37,307 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:38,307 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:38,307 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:38,307 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:38,307 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:39,308 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:39,308 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:39,309 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:39,309 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:40,309 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:40,310 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:40,310 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:40,311 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:41,310 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:41,311 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:41,311 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:41,311 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:42,312 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:42,312 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:42,312 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:42,312 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:43,313 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:43,313 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:43,314 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:43,314 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:44,313 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:44,313 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:44,314 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:44,315 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:45,313 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:45,313 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:45,315 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:45,316 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:46,307 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: OFF
+2025-04-28 13:33:46,307 INFO MOTOR1: disabled
+2025-04-28 13:33:52,751 INFO Yukon: logger initialized
+2025-04-28 13:33:52,768 INFO Subscribed to MQTT topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:33:52,768 INFO Subscribed to MQTT topic: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:33:52,769 INFO Registered callback for event: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:33:52,769 INFO Registered callback for event: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:33:52,770 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: ON
+2025-04-28 13:33:52,770 INFO MOTOR1: enabled
+2025-04-28 13:33:52,770 INFO Published to MQTT topic YUKON/MOTOR1/SPEED: 1.0
+2025-04-28 13:33:52,770 INFO MOTOR1: speed setpoint 1.0
+2025-04-28 13:33:52,770 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:52,770 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:52,770 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:52,770 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:53,771 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:53,771 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:53,771 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:53,771 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:53,834 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:33:53,834 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:33:54,389 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:33:54,389 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:33:54,771 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:54,771 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:54,771 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:54,771 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:55,060 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:33:55,060 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:33:55,772 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:55,772 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:55,772 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:55,772 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:55,784 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:33:55,784 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:33:56,428 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:33:56,428 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:33:56,773 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:56,774 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:56,774 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:56,774 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:57,143 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:33:57,143 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:33:57,731 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:33:57,732 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:33:57,775 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:57,775 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:57,775 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:57,775 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:58,401 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:33:58,401 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:33:58,775 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:58,775 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:58,776 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:58,776 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:33:59,776 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:59,777 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:33:59,777 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:33:59,777 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:00,777 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:00,777 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:00,777 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:00,778 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:01,778 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:01,778 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:01,778 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:01,778 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:02,771 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: OFF
+2025-04-28 13:34:02,771 INFO MOTOR1: disabled
+2025-04-28 13:34:05,688 INFO Yukon: logger initialized
+2025-04-28 13:34:05,714 INFO Subscribed to MQTT topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:05,714 INFO Subscribed to MQTT topic: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:34:05,716 INFO Registered callback for event: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:05,716 INFO Registered callback for event: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:34:05,716 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:05,716 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:05,717 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:05,717 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:05,717 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: ON
+2025-04-28 13:34:05,717 INFO MOTOR1: enabled
+2025-04-28 13:34:05,718 INFO Published to MQTT topic YUKON/MOTOR1/SPEED: 1.0
+2025-04-28 13:34:05,718 INFO MOTOR1: speed setpoint 1.0
+2025-04-28 13:34:06,716 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:06,716 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:06,716 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:06,716 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:06,991 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:06,991 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:07,717 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:07,717 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:07,717 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:07,718 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:07,893 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:07,893 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:08,518 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:08,518 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:08,718 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:08,718 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:08,718 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:08,718 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:09,181 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:09,181 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:09,719 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:09,719 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:09,720 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:09,720 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:09,875 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:09,876 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:10,345 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:10,345 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:10,575 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:10,575 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:10,720 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:10,720 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:10,721 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:10,721 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:11,722 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:11,723 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:11,724 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:11,724 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:12,576 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:12,576 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:12,723 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:12,723 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:12,723 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:12,724 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:13,209 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:13,209 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:13,723 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:13,723 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:13,724 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:13,724 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:14,724 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:14,725 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:14,725 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:14,725 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:15,357 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:15,357 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:15,718 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: OFF
+2025-04-28 13:34:15,718 INFO MOTOR1: disabled
+2025-04-28 13:34:24,571 INFO Yukon: logger initialized
+2025-04-28 13:34:24,587 INFO Subscribed to MQTT topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:24,588 INFO Subscribed to MQTT topic: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:34:24,588 INFO Registered callback for event: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:24,589 INFO Registered callback for event: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:34:24,589 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: ON
+2025-04-28 13:34:24,589 INFO MOTOR1: enabled
+2025-04-28 13:34:24,590 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:24,590 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:24,590 INFO Published to MQTT topic YUKON/MOTOR1/SPEED: 1.0
+2025-04-28 13:34:24,591 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:24,591 INFO MOTOR1: speed setpoint 1.0
+2025-04-28 13:34:24,591 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:25,590 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:25,590 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:25,590 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:25,590 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:25,638 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:25,638 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:26,491 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:26,491 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:26,590 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:26,590 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:26,591 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:26,591 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:27,591 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:27,591 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:27,592 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:27,592 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:27,623 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:27,623 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:28,592 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:28,592 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:28,592 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:28,592 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:28,736 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:28,736 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:29,594 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:29,595 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:29,596 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:29,596 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:29,868 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:29,869 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:30,595 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:30,595 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:30,596 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:30,596 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:31,595 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:31,595 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:31,596 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:31,596 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:32,053 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:32,054 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:32,596 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:32,596 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:32,597 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:32,597 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:33,597 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:33,598 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:33,598 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:33,599 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:34,500 INFO Received MQTT message: b'\xcd\xcc\x8c?\xcd\xcc\x0c@\x33\x33S@\xcd\xcc\x8c@\x00\x00\xb0@' on topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:34,501 INFO Retrieved feedback from module: MOTOR1
+2025-04-28 13:34:34,592 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: OFF
+2025-04-28 13:34:34,593 INFO MOTOR1: disabled
+2025-04-28 13:34:47,753 INFO Yukon: logger initialized
+2025-04-28 13:34:47,759 INFO Subscribed to MQTT topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:47,759 INFO Subscribed to MQTT topic: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:34:47,759 INFO Registered callback for event: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:34:47,759 INFO Registered callback for event: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:34:47,760 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: ON
+2025-04-28 13:34:47,760 INFO MOTOR1: enabled
+2025-04-28 13:34:47,760 INFO Published to MQTT topic YUKON/MOTOR1/SPEED: 1.0
+2025-04-28 13:34:47,760 INFO MOTOR1: speed setpoint 1.0
+2025-04-28 13:34:47,760 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:47,760 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:47,760 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:47,760 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:48,761 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:48,761 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:48,761 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:48,761 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:49,762 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:49,762 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:49,762 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:49,762 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:50,765 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:50,765 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:50,766 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:50,766 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:51,763 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:51,763 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:51,763 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:51,763 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:52,765 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:52,765 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:52,766 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:52,766 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:53,765 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:53,766 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:53,766 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:53,766 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:54,766 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:54,766 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:54,766 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:54,767 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:55,767 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:55,767 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:55,767 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:55,768 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:56,768 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:56,768 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:34:56,768 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:34:56,768 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:34:57,761 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: OFF
+2025-04-28 13:34:57,761 INFO MOTOR1: disabled
+2025-04-28 13:37:58,928 INFO Yukon: logger initialized
+2025-04-28 13:37:58,933 INFO Subscribed to MQTT topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:37:58,933 INFO Subscribed to MQTT topic: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:37:58,934 INFO Registered callback for event: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:37:58,934 INFO Registered callback for event: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:37:58,934 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: ON
+2025-04-28 13:37:58,934 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:37:58,934 INFO MOTOR1: enabled
+2025-04-28 13:37:58,934 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:37:58,934 INFO Published to MQTT topic YUKON/MOTOR1/SPEED: 1.0
+2025-04-28 13:37:58,934 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:37:58,934 INFO MOTOR1: speed setpoint 1.0
+2025-04-28 13:37:58,934 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:37:59,934 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:37:59,934 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:37:59,934 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:37:59,935 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:00,935 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:00,935 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:00,935 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:00,936 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:01,935 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:01,935 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:01,935 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:01,935 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:02,935 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:02,935 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:02,935 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:02,935 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:03,937 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:03,937 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:03,938 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:03,938 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:04,937 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:04,937 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:04,937 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:04,937 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:05,938 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:05,938 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:05,938 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:05,938 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:06,939 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:06,939 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:06,939 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:06,939 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:07,941 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:07,941 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:07,941 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:07,941 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:08,941 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:08,944 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:08,944 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:08,945 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:09,942 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:09,942 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:09,942 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:09,943 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:12,632 INFO Yukon: logger initialized
+2025-04-28 13:38:12,665 INFO Subscribed to MQTT topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:38:12,665 INFO Subscribed to MQTT topic: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:38:12,667 INFO Registered callback for event: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:38:12,667 INFO Registered callback for event: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:38:12,667 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:12,668 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: ON
+2025-04-28 13:38:12,668 INFO MOTOR1: enabled
+2025-04-28 13:38:12,668 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:12,668 INFO Published to MQTT topic YUKON/MOTOR1/SPEED: 1.0
+2025-04-28 13:38:12,669 INFO MOTOR1: speed setpoint 1.0
+2025-04-28 13:38:12,669 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:12,669 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:17,671 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:17,671 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:17,672 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:17,673 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:22,670 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:22,670 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:22,670 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: OFF
+2025-04-28 13:38:22,671 INFO MOTOR1: disabled
+2025-04-28 13:38:22,671 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:22,671 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:29,115 INFO Yukon: logger initialized
+2025-04-28 13:38:29,120 INFO Subscribed to MQTT topic: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:38:29,120 INFO Subscribed to MQTT topic: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:38:29,121 INFO Registered callback for event: YUKON/MOTOR1/FEEDBACK
+2025-04-28 13:38:29,121 INFO Registered callback for event: YUKON/SERVO1/FEEDBACK
+2025-04-28 13:38:29,121 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: ON
+2025-04-28 13:38:29,121 INFO MOTOR1: enabled
+2025-04-28 13:38:29,121 INFO Published to MQTT topic YUKON/MOTOR1/SPEED: 1.0
+2025-04-28 13:38:29,121 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:29,121 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:29,122 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:29,122 INFO MOTOR1: speed setpoint 1.0
+2025-04-28 13:38:29,122 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:30,122 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:30,122 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:30,122 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:30,122 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:31,123 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:31,123 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:31,123 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:31,124 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:32,124 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:32,124 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:32,124 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:32,124 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:33,125 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:33,125 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:33,125 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:33,125 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:34,126 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:34,126 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:34,126 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:34,126 INFO Retrieve feedback from module: SERVO1
+2025-04-28 13:38:35,127 INFO Published to MQTT topic YUKON/MOTOR1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:35,127 INFO Retrieve feedback from module: MOTOR1
+2025-04-28 13:38:35,127 INFO Published to MQTT topic YUKON/SERVO1/REQ/FEEDBACK: REQ
+2025-04-28 13:38:35,128 INFO Retrieve feedback from module: SERVO1
