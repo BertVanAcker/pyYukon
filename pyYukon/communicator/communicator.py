@@ -91,7 +91,7 @@ class communicator():
         """Handle incoming MQTT messages and trigger any registered callbacks."""
         payload = message.payload.decode("utf-8")
         topic = message.topic
-        self._logger.info(f"Received MQTT message: {payload} on topic: {topic}")
+        self._logger.syslog(msg=f"Received MQTT message: {payload} on topic: {topic}", level="INFO")
 
         # Trigger any registered callbacks for this topic
         self.trigger_callbacks(topic, payload)
@@ -117,6 +117,16 @@ class communicator():
             for callback in self.event_callbacks[event_key]:
                 callback(data)
 
+    def subscribe(self, event_key, callback):
+        """
+        Register a callback for a given event key (MQTT topic, Redis key).
+        :param event_key: The event key (MQTT topic, Redis key, etc.)
+        :param callback: The function to call when the event is triggered
+        """
+        if event_key not in self.event_callbacks:
+            self.event_callbacks[event_key] = []
+        self.event_callbacks[event_key].append(callback)
+        self._logger.syslog(msg=f"Registered callback for event: {event_key}", level="INFO")
 
     def shutdown(self):
         """Shut down the Event Handler."""

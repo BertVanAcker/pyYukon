@@ -1,6 +1,7 @@
 from pimoroni_yukon.modules import SerialServoModule
 from pimoroni_yukon.devices.lx_servo import LXServo
 import uasyncio as asyncio
+import struct
 # OWN MODULES
 from firmware.communication_matrix import *
 
@@ -21,6 +22,9 @@ class SerialServo:
         self.enable = False
         self.angle = 0.0
 
+        # MQTT CLIENT
+        self.client = None
+
     def set_servo_module(self):
         self.servo = LXServo(self.SERVO_ID, self.module.uart, self.module.duplexer)
 
@@ -38,4 +42,16 @@ class SerialServo:
         if topic == servo1_messages.TOPIC_SERVO_ANGLE:
             self.angle = int(msg.decode())
             self.enable = True
+
+        # feedback
+        if topic == feedback_messages.TOPIC_SERVO_FEEDBACK_REQ:
+            self.angle = 0  # TODO: fetch angle
+
+            # TODO: RETRIEVE PARAMETERS FROM MODULE!!
+            angle = 12.34
+            current = 1.23
+            temperature = 45.67
+            packed_data = struct.pack('fff', angle, current, temperature)
+
+            await self.client.publish(feedback_messages.TOPIC_SERVO_FEEDBACK, packed_data)
 

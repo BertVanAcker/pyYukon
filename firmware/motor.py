@@ -1,5 +1,6 @@
 from pimoroni_yukon.modules import BigMotorModule
 import uasyncio as asyncio
+import struct
 # OWN MODULES
 from firmware.communication_matrix import *
 
@@ -21,6 +22,9 @@ class EncoderDCMotor:
         # ACTUATION parameters
         self.enable = False
         self.speed = 0.0
+
+        #MQTT CLIENT
+        self.client = None
 
     def enable(self):
         self.module.enable()  # Enable the motor driver on the BigMotorModule
@@ -49,3 +53,18 @@ class EncoderDCMotor:
 
         if topic == motor1_messages.TOPIC_MOTOR_SPEED:
             self.speed = msg.decode()
+
+        # feedback
+        if topic == feedback_messages.TOPIC_MOTOR1_FEEDBACK_REQ:
+            current = 0        #TODO: fetch current
+            voltage = 12.0     #TODO: fetch voltage
+            power = 0.0        #TODO: fetch or calculate
+            speed = 0.0        #TODO: fetch speed
+            rpm = 0.0          # TODO: fetch or calculate
+
+            packed_data = struct.pack('fffff', current, voltage, power,rpm,speed)
+
+            #TODO: publish the parameters to MQTT
+            await self.client.publish(feedback_messages.TOPIC_MOTOR1_FEEDBACK, packed_data)
+
+

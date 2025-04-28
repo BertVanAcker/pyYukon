@@ -33,9 +33,13 @@ servo1 = SerialServo(SERVO_ID=1,DURATION=0.5,UPDATES=1,verbose=VERBOSE)
 
 # -----------------------MAIN LOOP------------------------------
 async def main():
-    client = NonBlockingMQTTClient(client_id="micropython_client", server="192.168.1.101")
+    client = NonBlockingMQTTClient(client_id="micropython_client", server="192.168.0.100")
     await client.connect()
     print("Connected to MQTT broker!")
+
+    # ASSIGN MQTT CLIENT FOR FEEDBACK PUBLISHING
+    motor1.client = client
+    servo1.client = client
 
     # Yukon board subscriptions
     await client.subscribe(general_messages.TOPIC_LED_A_BLINK, board.dispatch)
@@ -78,6 +82,8 @@ try:
     motor1.module.enable()
     # WIRELESS connection
     connect_wifi()
+
+
 
     # Run the async main loop
     asyncio.run(main())

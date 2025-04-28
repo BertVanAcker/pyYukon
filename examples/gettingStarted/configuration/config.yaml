@@ -20,25 +20,21 @@ YUKON_COMM_CONFIG:
         name: "BigMotor_M1"
         feedbacks:
           - feedback:
-            name: "rpm"
-            topic: "/YUKON/Modules/BigMotor_M1/RPM"
+            name: "feedback"
+            topic: "YUKON/MOTOR1/FEEDBACK"
             QoS: 10
+    - module:
+        type: "SerialServo"
+        name: "SerialServo_S1"
+        feedbacks:
           - feedback:
-            name: "current"
-            topic: "/YUKON/Modules/BigMotor_M1/I"
-            QoS: 10
-          - feedback:
-            name: "voltage"
-            topic: "/YUKON/Modules/BigMotor_M1/V"
-            QoS: 10
-          - feedback:
-            name: "power"
-            topic: "/YUKON/Modules/BigMotor_M1/P"
+            name: "feedback"
+            topic: "YUKON/SERVO1/FEEDBACK"
             QoS: 10
 
 
 
-mqtt_broker: "localhost"
+mqtt_broker: "192.168.1.101"
 mqtt_port: 1883
 
 logging:
