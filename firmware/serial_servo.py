@@ -1,6 +1,7 @@
 from pimoroni_yukon.modules import SerialServoModule
 from pimoroni_yukon.devices.lx_servo import LXServo
 import uasyncio as asyncio
+import ujson as json
 import struct
 # OWN MODULES
 from firmware.communication_matrix import *
@@ -44,14 +45,21 @@ class SerialServo:
             self.enable = True
 
         # feedback
-        if topic == feedback_messages.TOPIC_SERVO_FEEDBACK_REQ:
-            self.angle = 0  # TODO: fetch angle
+        if topic == feedback_messages.TOPIC_SERVO1_FEEDBACK_REQ:
 
             # TODO: RETRIEVE PARAMETERS FROM MODULE!!
             angle = 12.34
             current = 1.23
             temperature = 45.67
-            packed_data = struct.pack('fff', angle, current, temperature)
 
-            await self.client.publish(feedback_messages.TOPIC_SERVO_FEEDBACK, packed_data)
+            data = {
+                "angle": angle,
+                "current": current,
+                "temperature": temperature
+            }
+
+            # Convert to JSON string
+            json_data = json.dumps(data)
+
+            await self.client.publish(feedback_messages.TOPIC_SERVO_FEEDBACK, json_data)
 

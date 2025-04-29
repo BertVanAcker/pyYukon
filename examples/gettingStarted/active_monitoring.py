@@ -3,6 +3,7 @@ from pyYukon.devices.yukon import *
 from pyYukon.utils.constants import *
 
 
+
 yukon = yukon(config="configuration/config.yaml", verbose=True)
 yukon.start()
 
@@ -18,3 +19,5 @@ yukon.motor1.disable_motor()
 yukon.stop()
 
 x=1
+print(yukon.motor1.voltage_history)
+print(yukon.servo1.temperature_history)

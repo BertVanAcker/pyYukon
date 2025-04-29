@@ -33,7 +33,7 @@ servo1 = SerialServo(SERVO_ID=1,DURATION=0.5,UPDATES=1,verbose=VERBOSE)
 
 # -----------------------MAIN LOOP------------------------------
 async def main():
-    client = NonBlockingMQTTClient(client_id="micropython_client", server="192.168.0.100")
+    client = NonBlockingMQTTClient(client_id="micropython_client", server="192.168.1.101")
     await client.connect()
     print("Connected to MQTT broker!")
 
@@ -50,6 +50,9 @@ async def main():
     await client.subscribe(motor1_messages.TOPIC_MOTOR_SPEED, motor1.dispatch)
     # Yukon servo 1 subscriptions
     await client.subscribe(servo1_messages.TOPIC_SERVO_ANGLE, servo1.dispatch)
+    # Feedback requests
+    await client.subscribe(feedback_messages.TOPIC_MOTOR1_FEEDBACK_REQ, motor1.dispatch)
+    await client.subscribe(feedback_messages.TOPIC_SERVO1_FEEDBACK_REQ, servo1.dispatch)
 
     # ADD OWN FUNCTIONS
     asyncio.create_task(board.BOARD_GENERAL())

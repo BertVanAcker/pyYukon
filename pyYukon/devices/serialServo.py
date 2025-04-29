@@ -1,3 +1,4 @@
+import json
 import time
 import struct
 
@@ -58,9 +59,12 @@ class serial_servo():
         """ Callback function for retrieving module feedback """
         self.logger.syslog(msg="Retrieved feedback from module: " + self.ID, level="INFO")
         try:
-            byte_data = bytes(msg[2:-1], "utf-8").decode("unicode_escape").encode("latin1")         # STRING TO BYTES [2:-1]
-            unpacked_data = struct.unpack('fff', byte_data)
-            self.angle, self.current, self.temperature = unpacked_data
+
+            data = json.loads(msg)
+            self.angle = data["angle"]
+            self.current = data["current"]
+            self.temperature = data["temperature"]
+
             # update history
             self.angle_history.append(self.angle)
             self.current_history.append(self.current)

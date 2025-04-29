@@ -1,6 +1,7 @@
 from pimoroni_yukon.modules import BigMotorModule
 import uasyncio as asyncio
 import struct
+import ujson as json
 # OWN MODULES
 from firmware.communication_matrix import *
 
@@ -56,15 +57,24 @@ class EncoderDCMotor:
 
         # feedback
         if topic == feedback_messages.TOPIC_MOTOR1_FEEDBACK_REQ:
-            current = 0        #TODO: fetch current
-            voltage = 12.0     #TODO: fetch voltage
+            current = 0.00        #TODO: fetch current
+            voltage = 12.00     #TODO: fetch voltage
             power = 0.0        #TODO: fetch or calculate
             speed = 0.0        #TODO: fetch speed
-            rpm = 0.0          # TODO: fetch or calculate
+            rpm = 10.00         # TODO: fetch or calculate
 
-            packed_data = struct.pack('fffff', current, voltage, power,rpm,speed)
+            data = {
+                "current": current,
+                "voltage": voltage,
+                "power": power,
+                "speed": speed,
+                "rpm": rpm,
+            }
+
+            # Convert to JSON string
+            json_data = json.dumps(data)
 
             #TODO: publish the parameters to MQTT
-            await self.client.publish(feedback_messages.TOPIC_MOTOR1_FEEDBACK, packed_data)
+            await self.client.publish(feedback_messages.TOPIC_MOTOR1_FEEDBACK, json_data)
 
 

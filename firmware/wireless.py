@@ -2,8 +2,8 @@ import network
 import time
 
 # Wi-Fi Credentials
-SSID = "robonet_2.4"
-PASSWORD = "robonet_bmkr"
+SSID = "home-net-lab"
+PASSWORD = "@BMKR_LAB"
 
 
 def connect_wifi():

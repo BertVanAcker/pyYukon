@@ -89,7 +89,10 @@ class communicator():
 
     def on_mqtt_message(self, client, userdata, message):
         """Handle incoming MQTT messages and trigger any registered callbacks."""
-        payload = message.payload.decode("utf-8")
+        try:
+            payload = message.payload.decode("utf-8")
+        except:
+            payload = message.payload
         topic = message.topic
         self._logger.syslog(msg=f"Received MQTT message: {payload} on topic: {topic}", level="INFO")
 

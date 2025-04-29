@@ -1,3 +1,4 @@
+import json
 import time
 import struct
 
@@ -85,9 +86,13 @@ class encoder_motor():
         """ Callback function for retrieving module feedback """
         self.logger.syslog(msg="Retrieved feedback from module: " + self.ID, level="INFO")
         try:
-            byte_data = bytes(msg[2:-1], "utf-8").decode("unicode_escape").encode("latin1")  # STRING TO BYTES [2:-1]
-            unpacked_data = struct.unpack('fffff', byte_data)
-            self.current, self.voltage, self.power,self.rpm,self.speed = unpacked_data
+            data = json.loads(msg)
+            self.speed = data["speed"]
+            self.rpm = data["rpm"]
+            self.current = data["current"]
+            self.voltage = data["voltage"]
+            self.power = data["speed"]
+
             # update history
             self.current_history.append(self.current)
             self.voltage_history.append(self.voltage)
