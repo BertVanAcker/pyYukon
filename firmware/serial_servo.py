@@ -2,9 +2,11 @@ from pimoroni_yukon.modules import SerialServoModule
 from pimoroni_yukon.devices.lx_servo import LXServo
 import uasyncio as asyncio
 import ujson as json
+import time
 import struct
 # OWN MODULES
 from firmware.communication_matrix import *
+from firmware.constants import *
 
 class SerialServo:
     def __init__(self, SERVO_ID=1,DURATION=1,UPDATES=1,verbose=False):
@@ -29,37 +31,32 @@ class SerialServo:
     def set_servo_module(self):
         self.servo = LXServo(self.SERVO_ID, self.module.uart, self.module.duplexer)
 
-    async def angle_control(self):
+    def angle_control(self):
         """servo angle control """
-        while True:
-            if self.enable:
-                self.servo.move_to(self.angle, self.DURATION)
-                asyncio.sleep(self.DURATION)
-                self.enable = False
-            await asyncio.sleep(1 / self.UPDATES)  #Periodic work
+        if self.enable:
+            self.servo.move_to(self.angle, self.DURATION)
+            time.sleep(self.DURATION)
+            self.enable = False
 
-    async def dispatch(self, topic, msg):
-        if self.verbose: print("Received on topic {}: {}".format(topic, msg))
-        if topic == servo1_messages.TOPIC_SERVO_ANGLE:
-            self.angle = int(msg.decode())
+    def dispatch(self, action, value):
+        if action == actions.ACTION_SERVO_SET_ANGLE:
+            self.angle = int(value)
             self.enable = True
 
-        # feedback
-        if topic == feedback_messages.TOPIC_SERVO1_FEEDBACK_REQ:
+    def feedback(self):
+        angle = 12.34
+        current = 1.23
+        temperature = 45.67
 
-            # TODO: RETRIEVE PARAMETERS FROM MODULE!!
-            angle = 12.34
-            current = 1.23
-            temperature = 45.67
+        data = {
+            "angle": angle,
+            "current": current,
+            "temperature": temperature
+        }
 
-            data = {
-                "angle": angle,
-                "current": current,
-                "temperature": temperature
-            }
+        # Convert to JSON string
+        json_data = json.dumps(data)
 
-            # Convert to JSON string
-            json_data = json.dumps(data)
+        self.client.publish(feedback_messages.TOPIC_SERVO_FEEDBACK, json_data, qos=0)
 
-            await self.client.publish(feedback_messages.TOPIC_SERVO_FEEDBACK, json_data)
 

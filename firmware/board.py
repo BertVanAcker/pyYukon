@@ -2,6 +2,7 @@ import uasyncio as asyncio
 from pimoroni_yukon.modules import BigMotorModule
 #OWN MODULES
 from firmware.communication_matrix import *
+from firmware.constants import *
 
 class YukonBoard:
     def __init__(self, yukon=None,update=2,verbose=False):
@@ -14,45 +15,38 @@ class YukonBoard:
 
         # Board parameters
         self.LED_A_STATE = False
-        self.LED_A_BLINK = False
+        self.LED_A_BLINK = "False"
         self.LED_B_STATE = False
-        self.LED_B_BLINK = False
+        self.LED_B_BLINK = "False"
         self.MAIN_OUTPUT_STATE = False
         self.MAIN_OUTPUT_ISENABLED = False
 
+    def BOARD_GENERAL(self):
 
+        # --- BLINKING LED A ---
+        if "True" in self.LED_A_BLINK:
+            self.LED_A_STATE = not self.LED_A_STATE
+            self.yukon.set_led('A', self.LED_A_STATE)
+        elif "True" in self.LED_B_BLINK:
+            self.LED_B_STATE = not self.LED_B_STATE
+            self.yukon.set_led('B', self.LED_B_STATE)
+        else:
+            self.yukon.set_led('A', False)
+            self.yukon.set_led('B', False)
 
-    async def BOARD_GENERAL(self):
+        # --- MAIN OUTPUT ---
+        if self.MAIN_OUTPUT_STATE and not self.MAIN_OUTPUT_ISENABLED:
+            self.MAIN_OUTPUT_ISENABLED = True
+            self.yukon.enable_main_output()
+        elif not self.MAIN_OUTPUT_STATE and self.MAIN_OUTPUT_ISENABLED:
+            self.MAIN_OUTPUT_ISENABLED = False
+            self.yukon.disable_main_output()
 
-        while True:
-            if self.verbose: print("MAIN OUTPUT SETTING {}: {}".format(self.MAIN_OUTPUT_STATE, self.MAIN_OUTPUT_ISENABLED))
-            # --- BLINKING LED A ---
-            if self.LED_A_BLINK == "True":
-                self.LED_A_STATE = not self.LED_A_STATE
-                self.yukon.set_led('A', self.LED_A_STATE)
-            if self.LED_B_BLINK == "True":
-                self.LED_B_STATE = not self.LED_B_STATE
-                self.yukon.set_led('B', self.LED_B_STATE)
-            else:
-                self.yukon.set_led('A', False)
-                self.yukon.set_led('B', False)
+    def dispatch(self,action,value):
 
-            # --- MAIN OUTPUT ---
-            if self.MAIN_OUTPUT_STATE and not self.MAIN_OUTPUT_ISENABLED:
-                self.MAIN_OUTPUT_ISENABLED = True
-                self.yukon.enable_main_output()
-            elif not self.MAIN_OUTPUT_STATE and self.MAIN_OUTPUT_ISENABLED:
-                self.MAIN_OUTPUT_ISENABLED = False
-                self.yukon.disable_main_output()
-
-            await asyncio.sleep(self.UPDATE)  # Simulate periodic work
-
-    async def dispatch(self,topic, msg):
-
-        if self.verbose: print("Received on topic {}: {}".format(topic, msg))
-        if topic == general_messages.TOPIC_LED_A_BLINK:
-            self.LED_A_BLINK = msg.decode()
-        elif topic == general_messages.TOPIC_LED_B_BLINK:
-            self.LED_B_BLINK = msg.decode()
-        elif topic == general_messages.TOPIC_MAIN_OUTPUT:
-            self.MAIN_OUTPUT_STATE = msg.decode()
+        if action == actions.ACTION_BLINK_A:
+            self.LED_A_BLINK = value
+        elif action == actions.ACTION_BLINK_B:
+            self.LED_B_BLINK = value
+        elif action== actions.ACTION_OUTPUT_ENABLE:
+            self.MAIN_OUTPUT_STATE = value

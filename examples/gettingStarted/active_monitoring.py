@@ -19,5 +19,5 @@ yukon.motor1.disable_motor()
 yukon.stop()
 
 x=1
-print(yukon.motor1.voltage_history)
+print(yukon.motor1.rpm_history)
 print(yukon.servo1.temperature_history)

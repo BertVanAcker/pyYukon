@@ -4,6 +4,7 @@ import struct
 import ujson as json
 # OWN MODULES
 from firmware.communication_matrix import *
+from firmware.constants import *
 
 class EncoderDCMotor:
     def __init__(self, ENCODER_PIO=0, ENCODER_SM=0,ENCODER_CPR=12, GEAR_RATIO=30,UPDATES=30,verbose=False):
@@ -21,60 +22,65 @@ class EncoderDCMotor:
         self.module = BigMotorModule(encoder_pio=self.ENCODER_PIO,encoder_sm=self.ENCODER_SM,counts_per_rev=self.MOTOR_CPR)
 
         # ACTUATION parameters
-        self.enable = False
+        self._enable = False
         self.speed = 0.0
 
         #MQTT CLIENT
         self.client = None
 
+        # FEEDBACK PARAMETERS
+        self.current = 0.0
+        self.voltage = 0.0
+        self.power = 0.0
+        self.speed = 0.0
+        self.rpm = 0.0
+
     def enable(self):
+        self._enable = True
         self.module.enable()  # Enable the motor driver on the BigMotorModule
 
     def disable(self):
+        self._enable = False
         self.module.disable()  # Disable the motor driver on the BigMotorModule
 
-    async def open_loop_velocity_control(self):
+    def velocity_control(self):
         """Open loop velocity control """
-        while True:
-            if self.enable:
-                self.module.motor.speed(float(self.speed))
+        if self._enable:
+            self.module.motor.speed(float(self.speed))
+        else:
+            self.speed = 0.0
+            self.module.motor.speed(0.0)
+
+
+
+    def dispatch(self,action,value):
+
+        if action == actions.ACTION_MOTOR_ENABLE:
+            if "True" in value:
+                self._enable = True
             else:
-                self.speed = 0.0
-                self.module.motor.speed(0.0)
-            await asyncio.sleep(1 / self.UPDATES)  #Periodic work
+                self._enable = False
+        elif action == actions.ACTION_MOTOR_SET_SPEED:
+            print("setting speed")
+            self.speed = value
 
-    async def dispatch(self, topic, msg):
+    def feedback(self):
+        self.current = 0.00  # TODO: fetch current
+        self.voltage = 12.00     #TODO: fetch voltage
+        self.power = 0.0        #TODO: fetch or calculate
+        self.rpm = 10.00         # TODO: fetch or calculate
 
-        if self.verbose: print("Received on topic {}: {}".format(topic, msg))
-        if topic == motor1_messages.TOPIC_MOTOR_ENABLE:
-            if msg.decode() == "ON":
-                self.enable = True
-            else:
-                self.enable = False
+        data = {
+            "current": self.current,
+            "voltage": self.voltage,
+            "power": self.power,
+            "speed": self.speed,
+            "rpm": self.rpm,
+        }
 
-        if topic == motor1_messages.TOPIC_MOTOR_SPEED:
-            self.speed = msg.decode()
+        # Convert to JSON string
+        json_data = json.dumps(data)
 
-        # feedback
-        if topic == feedback_messages.TOPIC_MOTOR1_FEEDBACK_REQ:
-            current = 0.00        #TODO: fetch current
-            voltage = 12.00     #TODO: fetch voltage
-            power = 0.0        #TODO: fetch or calculate
-            speed = 0.0        #TODO: fetch speed
-            rpm = 10.00         # TODO: fetch or calculate
-
-            data = {
-                "current": current,
-                "voltage": voltage,
-                "power": power,
-                "speed": speed,
-                "rpm": rpm,
-            }
-
-            # Convert to JSON string
-            json_data = json.dumps(data)
-
-            #TODO: publish the parameters to MQTT
-            await self.client.publish(feedback_messages.TOPIC_MOTOR1_FEEDBACK, json_data)
+        self.client.publish(feedback_messages.TOPIC_MOTOR1_FEEDBACK, json_data,qos=0)
 
 
