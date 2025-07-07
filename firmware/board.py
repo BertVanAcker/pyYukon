@@ -3,11 +3,13 @@ from pimoroni_yukon.modules import BigMotorModule
 #OWN MODULES
 from firmware.communication_matrix import *
 from firmware.constants import *
+import ujson as json
 
 class YukonBoard:
     def __init__(self, yukon=None,update=2,verbose=False):
         #Yukon object
         self.yukon = yukon
+        self.client = None
 
         #Auxiliary
         self.verbose = verbose
@@ -48,5 +50,24 @@ class YukonBoard:
             self.LED_A_BLINK = value
         elif action == actions.ACTION_BLINK_B:
             self.LED_B_BLINK = value
-        elif action== actions.ACTION_OUTPUT_ENABLE:
+        elif action == actions.ACTION_OUTPUT_ENABLE:
             self.MAIN_OUTPUT_STATE = value
+
+    def feedback(self):
+
+        self.current = self.yukon.read_current()
+        self.voltage =  self.yukon.read_output_voltage()
+        self.power = self.current*self.voltage
+        temperature = self.yukon.read_temperature()
+
+        data = {
+            "current": self.current,
+            "voltage": self.voltage,
+            "power": self.power,
+            "temperature": temperature
+        }
+
+        # Convert to JSON string
+        json_data = json.dumps(data)
+
+        self.client.publish(feedback_messages.TOPIC_BOARD_FEEDBACK, json_data, qos=0)

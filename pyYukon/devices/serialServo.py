@@ -37,17 +37,18 @@ class serial_servo():
 
         # --- ENCODER MOTOR FEEDBACK ---
         self.angle = 0.0
-        self.current = 0.0
+        self.voltage = 0.0
         self.temperature = 0.0
 
         self.angle_history = []
-        self.current_history = []
+        self.voltage_history = []
         self.temperature_history = []
 
     # -------------------------- MOTOR FUNCTIONS -------------------------------------
     def set_angle(self,angle=None):
         """ Set servo angle"""
-        self.communicator.publish_mqtt(topic=self.topic_servo_angle, message=angle)
+        msg = formatMessage(module="SERVO", action="SERVO_SET_ANGLE", value=angle)
+        self.communicator.publish_mqtt(topic=YUKON_BOARD_TOPICS.TOPIC_ACTION, message=msg)
         self.logger.syslog(msg=self.ID + ": angle setpoint " + angle.__str__(), level="INFO")
 
     def retrieve_feedback(self):
@@ -62,12 +63,12 @@ class serial_servo():
 
             data = json.loads(msg)
             self.angle = data["angle"]
-            self.current = data["current"]
+            self.voltage = data["voltage"]
             self.temperature = data["temperature"]
 
             # update history
             self.angle_history.append(self.angle)
-            self.current_history.append(self.current)
+            self.voltage_history.append(self.voltage)
             self.temperature_history.append(self.temperature)
         except:
             self.logger.syslog(msg="Unable to interpret feedback from module: " + self.ID, level="ERROR")

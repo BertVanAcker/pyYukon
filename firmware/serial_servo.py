@@ -44,13 +44,13 @@ class SerialServo:
             self.enable = True
 
     def feedback(self):
-        angle = 12.34
-        current = 1.23
-        temperature = 45.67
+        angle = self.servo.read_angle()
+        voltage = self.servo.read_voltage()
+        temperature = self.servo.read_temperature()
 
         data = {
             "angle": angle,
-            "current": current,
+            "voltage": voltage,
             "temperature": temperature
         }
 

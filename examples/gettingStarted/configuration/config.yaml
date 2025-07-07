@@ -13,8 +13,13 @@ YUKON_COMM_CONFIG:
   board:
     - property:
         type: "data"
+        name: "board_feedback"
+        topic: "YUKON/BOARD/FEEDBACK"
+        QoS: 10
+    - property:
+        type: "data"
         name: "Voltage_in"
-        topic: "/YUKON/Vin"
+        topic: "YUKON/Vin"
         QoS: 10
   modules:
     - module:

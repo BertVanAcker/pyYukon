@@ -1,3 +1,5 @@
+import json
+
 import yaml
 
 
@@ -43,3 +45,13 @@ class PeriodicThread(threading.Thread):
 
     def stop(self):
         self.stop_event.set()
+
+def formatMessage(module="BOARD",action="None",value="None"):
+
+    data = {
+        "module": module,
+        "action": action,
+        "value": value
+    }
+    json_data = json.dumps(data)
+    return json_data

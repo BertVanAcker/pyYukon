@@ -31,10 +31,7 @@ class yukon():
         self.servo1 = serial_servo(ID="SERVO1",logger=self.logger,communicator=self.communicator,verbose=self.verbose)
         # --- ACTIVATE COMMUNCATION ---
 
-        # --- ACTIVATE PERIODIC FEEDBACK ---
-        if 'YUKON_COMM_CONFIG' in self.config:
-            period = self.config['YUKON_COMM_CONFIG']['active_monitoring']['period']
-        self.monitoring_thread = PeriodicThread(period, self._request_module_feedback)  # interval = 1 second
+
 
 
 
@@ -42,50 +39,33 @@ class yukon():
     # -------------------------- BOARD FUNCTIONS -------------------------------------
     def enable_main_output(self):
         """ Enable main output of the Yukon board"""
-        self.communicator.publish_mqtt(topic=YUKON_BOARD_TOPICS.TOPIC_ENABLE_MAIN_OUTPUT,message="ON")
+        msg = formatMessage(module="BOARD",action="OUTPUT_ENABLE",value=True)
+        self.communicator.publish_mqtt(topic=YUKON_BOARD_TOPICS.TOPIC_ACTION,message=msg)
         self.logger.syslog(msg="Yukon: main output enabled",level="INFO")
 
     def disable_main_output(self):
         """ Enable main output of the Yukon board"""
-        self.communicator.publish_mqtt(topic=YUKON_BOARD_TOPICS.TOPIC_ENABLE_MAIN_OUTPUT,message="OFF")
+        msg = formatMessage(module="BOARD", action="OUTPUT_ENABLE", value=False)
+        self.communicator.publish_mqtt(topic=YUKON_BOARD_TOPICS.TOPIC_ACTION,message=msg)
         self.logger.syslog(msg="Yukon: main output disabled",level="INFO")
 
-    def set_led(self,LED=YUKON_BOARD.YK_LED_A,led_state=True):
-        """ Setting the onboard leds on Yukon board"""
+    def blink_led(self,LED=YUKON_BOARD.YK_LED_A,activation = "True"):
         if LED == YUKON_BOARD.YK_LED_A:
-            self.communicator.publish_mqtt(topic=YUKON_BOARD_TOPICS.TOPIC_LEDA,message=led_state)
-            self.logger.syslog(msg="Yukon: setting "+LED+"to state"+led_state.__str__(), level="INFO")
+            msg = formatMessage(module="BOARD", action="ACTION_BLINK_A", value=activation)
+            self.communicator.publish_mqtt(topic=YUKON_BOARD_TOPICS.TOPIC_ACTION,message=msg)
+            self.logger.syslog(msg="Yukon: blinking "+LED, level="INFO")
         elif LED == YUKON_BOARD.YK_LED_B:
-            self.communicator.publish_mqtt(topic=YUKON_BOARD_TOPICS.TOPIC_LEDB, message=led_state)
-            self.logger.syslog(msg="Yukon: setting " + LED + " to state " + led_state.__str__(), level="INFO")
+            msg = formatMessage(module="BOARD", action="ACTION_BLINK_B", value=activation)
+            self.communicator.publish_mqtt(topic=YUKON_BOARD_TOPICS.TOPIC_ACTION, message=msg)
+            self.logger.syslog(msg="Yukon: blinking " + LED, level="INFO")
         else:
             self.logger.syslog(msg="Yukon: Unable to set state of "+LED, level="ERROR")
-
 
 
     def _request_module_feedback(self):
         """Request periodic feedback from all modules"""
         self.motor1.retrieve_feedback()
         self.servo1.retrieve_feedback()
-
-    def start(self):
-        """Start the active monitoring of the Yukon device"""
-        self.monitoring_thread.start()
-
-    def stop(self):
-        """Stop the active monitoring of the Yukon """
-        self.monitoring_thread.stop()
-        self.monitoring_thread.join()
-
-
-
-
-
-
-
-
-
-
 
 
     def configure_logger(self):

@@ -65,16 +65,12 @@ class EncoderDCMotor:
             self.speed = value
 
     def feedback(self):
-        self.current = 0.00  # TODO: fetch current
-        self.voltage = 12.00     #TODO: fetch voltage
-        self.power = 0.0        #TODO: fetch or calculate
-        self.rpm = 10.00         # TODO: fetch or calculate
+
+        capture = self.module.encoder.capture()  # Capture the state of the encoder
+        self.rpm = capture.revolutions_per_second*60
 
         data = {
-            "current": self.current,
-            "voltage": self.voltage,
-            "power": self.power,
-            "speed": self.speed,
+            "velocityRequest": self.speed,
             "rpm": self.rpm,
         }
 

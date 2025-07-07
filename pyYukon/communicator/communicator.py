@@ -59,7 +59,7 @@ class communicator():
 
         # configure the MQTT connection
         if 'YUKON_COMM_CONFIG' in self.config:
-            board_feedback = self.config['YUKON_COMM_CONFIG']
+            board_feedback = self.config['YUKON_COMM_CONFIG']['board']
             for item in board_feedback:
                 if 'property' in item and 'name' in item['property']:
                     self.mqtt_subscribe_topics.append(item['property']['topic'])

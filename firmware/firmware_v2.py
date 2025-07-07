@@ -10,7 +10,6 @@ from firmware.board import *
 from firmware.mqtt_setup import *
 from firmware.wireless import *
 from firmware.serial_servo import *
-from firmware.communication_matrix import *
 from firmware.timed_function import *
 import ujson
 
@@ -55,6 +54,7 @@ boardFunction = timerFuction(1,board.BOARD_GENERAL)
 motorFunction = timerFuction(0.5,motor1.velocity_control)
 servoFunction = timerFuction(0.5,servo1.angle_control)
 
+boardFeedbackFunction = timerFuction(1,board.feedback)
 motorFeedbackFunction = timerFuction(1,motor1.feedback)
 servoFeedbackFunction = timerFuction(1,servo1.feedback)
 
@@ -62,6 +62,7 @@ servoFeedbackFunction = timerFuction(1,servo1.feedback)
 def main():
     client = mqtt_setup(client_id="YUKON_FIRMWARE_v2",server="192.168.1.101")
     #ASSIGN MQTT CLIENTS
+    board.client = client
     motor1.client = client
     servo1.client = client
 
@@ -73,6 +74,7 @@ def main():
 
     # start all periodic functions
     boardFunction.start()
+    boardFeedbackFunction.start()
     motorFunction.start()
     motorFeedbackFunction.start()
     servoFunction.start()
