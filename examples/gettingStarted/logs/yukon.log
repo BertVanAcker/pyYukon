@@ -8847,3 +8847,183 @@
 2025-07-07 15:28:11,511 INFO Retrieved feedback from module: SERVO1
 2025-07-07 15:28:12,134 INFO Published to MQTT topic YUKON/ACTION: {"module": "MOTOR1", "action": "MOTOR_SET_SPEED", "value": 0.0}
 2025-07-07 15:28:12,134 INFO MOTOR1: disabled
+2025-07-07 15:29:01,343 INFO Yukon: logger initialized
+2025-07-07 15:29:01,358 INFO Subscribed to MQTT topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:01,358 INFO Subscribed to MQTT topic: YUKON/Vin
+2025-07-07 15:29:01,358 INFO Subscribed to MQTT topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:01,358 INFO Subscribed to MQTT topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:01,359 INFO Registered callback for event: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:01,359 INFO Registered callback for event: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:01,359 INFO Registered callback for event: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:01,359 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: ON
+2025-07-07 15:29:01,359 INFO MOTOR1: enabled
+2025-07-07 15:29:01,359 INFO Published to MQTT topic YUKON/ACTION: {"module": "MOTOR1", "action": "MOTOR_SET_SPEED", "value": 1.0}
+2025-07-07 15:29:01,359 INFO MOTOR1: speed setpoint 1.0
+2025-07-07 15:29:01,873 INFO Received MQTT message: {"current": 0.3835348, "temperature": 26.01166, "power": 3.075786, "voltage": 8.019576} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:01,874 INFO Retrieved feedback from board:
+2025-07-07 15:29:01,874 INFO Received MQTT message: {"rpm": 0.0, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:01,874 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:01,874 INFO Received MQTT message: {"angle": -0.5, "voltage": 5.225, "temperature": 30} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:01,874 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:02,509 INFO Received MQTT message: {"current": 0.43429, "temperature": 25.81494, "power": 3.482822, "voltage": 8.019576} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:02,509 INFO Retrieved feedback from board:
+2025-07-07 15:29:02,509 INFO Received MQTT message: {"rpm": 134.1139, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:02,509 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:02,510 INFO Received MQTT message: {"angle": -0.5, "voltage": 8.073, "temperature": 30} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:02,510 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:03,510 INFO Received MQTT message: {"current": 0.3835348, "temperature": 26.06784, "power": 3.073476, "voltage": 8.013553} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:03,510 INFO Retrieved feedback from board:
+2025-07-07 15:29:03,510 INFO Received MQTT message: {"rpm": 961.3696, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:03,510 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:03,510 INFO Received MQTT message: {"angle": -0.5, "voltage": 8.073, "temperature": 30} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:03,510 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:04,507 INFO Received MQTT message: {"current": 0.4173717, "temperature": 25.39267, "power": 3.342116, "voltage": 8.007529} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:04,508 INFO Retrieved feedback from board:
+2025-07-07 15:29:04,508 INFO Received MQTT message: {"rpm": 962.7489, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:04,508 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:04,508 INFO Received MQTT message: {"angle": -0.25, "voltage": 8.075, "temperature": 30} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:04,508 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:05,514 INFO Received MQTT message: {"current": 0.4004532, "temperature": 25.33627, "power": 3.196992, "voltage": 7.983436} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:05,515 INFO Retrieved feedback from board:
+2025-07-07 15:29:05,516 INFO Received MQTT message: {"rpm": 963.5418, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:05,516 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:05,516 INFO Received MQTT message: {"angle": -0.25, "voltage": 8.073, "temperature": 30} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:05,516 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:06,360 INFO Published to MQTT topic YUKON/ACTION: {"module": "SERVO", "action": "SERVO_SET_ANGLE", "value": 180}
+2025-07-07 15:29:06,360 INFO SERVO1: angle setpoint 180
+2025-07-07 15:29:06,507 INFO Received MQTT message: {"current": 0.3835348, "temperature": 25.30811, "power": 3.061925, "voltage": 7.983436} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:06,507 INFO Retrieved feedback from board:
+2025-07-07 15:29:06,507 INFO Received MQTT message: {"rpm": 959.6307, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:06,507 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:07,028 INFO Received MQTT message: {"angle": 116.75, "voltage": 8.073, "temperature": 30} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:07,028 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:07,511 INFO Received MQTT message: {"current": 0.4173717, "temperature": 25.56168, "power": 3.329545, "voltage": 7.977412} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:07,512 INFO Retrieved feedback from board:
+2025-07-07 15:29:07,512 INFO Received MQTT message: {"rpm": 955.2914, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:07,512 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:07,512 INFO Received MQTT message: {"angle": 125.5, "voltage": 8.073, "temperature": 31} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:07,512 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:08,361 INFO Published to MQTT topic YUKON/ACTION: {"module": "SERVO", "action": "SERVO_SET_ANGLE", "value": 0}
+2025-07-07 15:29:08,361 INFO SERVO1: angle setpoint 0
+2025-07-07 15:29:08,508 INFO Received MQTT message: {"current": 0.4004532, "temperature": 26.06784, "power": 3.199404, "voltage": 7.989459} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:08,508 INFO Retrieved feedback from board:
+2025-07-07 15:29:08,508 INFO Received MQTT message: {"rpm": 960.5718, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:08,509 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:09,113 INFO Received MQTT message: {"angle": 6.5, "voltage": 8.073, "temperature": 31} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:09,113 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:09,509 INFO Received MQTT message: {"current": 0.4173717, "temperature": 25.7868, "power": 3.337088, "voltage": 7.995482} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:09,509 INFO Retrieved feedback from board:
+2025-07-07 15:29:09,509 INFO Received MQTT message: {"rpm": 957.3137, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:09,509 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:09,510 INFO Received MQTT message: {"angle": -0.75, "voltage": 8.073, "temperature": 31} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:09,510 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:10,509 INFO Received MQTT message: {"current": 0.4173717, "temperature": 26.09595, "power": 3.339602, "voltage": 8.001506} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:10,509 INFO Retrieved feedback from board:
+2025-07-07 15:29:10,509 INFO Received MQTT message: {"rpm": 961.4174, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:10,510 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:10,510 INFO Received MQTT message: {"angle": -0.5, "voltage": 8.073, "temperature": 31} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:10,510 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:11,571 INFO Received MQTT message: {"current": 0.4173717, "temperature": 26.15207, "power": 3.337088, "voltage": 7.995482} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:11,571 INFO Retrieved feedback from board:
+2025-07-07 15:29:11,571 INFO Received MQTT message: {"rpm": 962.445, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:11,571 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:11,571 INFO Received MQTT message: {"angle": -0.75, "voltage": 8.073, "temperature": 31} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:11,572 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:12,595 INFO Received MQTT message: {"current": 0.4173717, "temperature": 26.20819, "power": 3.347144, "voltage": 8.019576} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:12,595 INFO Retrieved feedback from board:
+2025-07-07 15:29:12,595 INFO Received MQTT message: {"rpm": 961.936, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:12,595 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:12,596 INFO Received MQTT message: {"angle": -0.5, "voltage": 8.073, "temperature": 32} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:12,596 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:13,362 INFO Published to MQTT topic YUKON/ACTION: {"module": "MOTOR1", "action": "MOTOR_SET_SPEED", "value": 0.0}
+2025-07-07 15:29:13,362 INFO MOTOR1: disabled
+2025-07-07 15:29:22,677 INFO Yukon: logger initialized
+2025-07-07 15:29:22,683 INFO Subscribed to MQTT topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:22,683 INFO Subscribed to MQTT topic: YUKON/Vin
+2025-07-07 15:29:22,683 INFO Subscribed to MQTT topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:22,683 INFO Subscribed to MQTT topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:22,684 INFO Registered callback for event: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:22,684 INFO Registered callback for event: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:22,684 INFO Registered callback for event: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:22,684 INFO Published to MQTT topic YUKON/MOTOR1/ENABLE: ON
+2025-07-07 15:29:22,684 INFO MOTOR1: enabled
+2025-07-07 15:29:22,684 INFO Published to MQTT topic YUKON/ACTION: {"module": "MOTOR1", "action": "MOTOR_SET_SPEED", "value": 1.0}
+2025-07-07 15:29:22,684 INFO MOTOR1: speed setpoint 1.0
+2025-07-07 15:29:23,509 INFO Received MQTT message: {"current": 0.4173717, "temperature": 26.23627, "power": 3.339602, "voltage": 8.001506} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:23,509 INFO Retrieved feedback from board:
+2025-07-07 15:29:23,509 INFO Received MQTT message: {"rpm": 46.1293, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:23,509 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:23,509 INFO Received MQTT message: {"angle": -0.5, "voltage": 8.073, "temperature": 33} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:23,510 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:24,508 INFO Received MQTT message: {"current": 0.4004532, "temperature": 25.27991, "power": 3.209053, "voltage": 8.013553} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:24,509 INFO Retrieved feedback from board:
+2025-07-07 15:29:24,509 INFO Received MQTT message: {"rpm": 963.2701, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:24,509 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:24,509 INFO Received MQTT message: {"angle": -0.5, "voltage": 8.073, "temperature": 33} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:24,509 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:25,515 INFO Received MQTT message: {"current": 0.4004532, "temperature": 26.06784, "power": 3.19458, "voltage": 7.977412} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:25,515 INFO Retrieved feedback from board:
+2025-07-07 15:29:25,515 INFO Received MQTT message: {"rpm": 965.7877, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:25,515 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:25,515 INFO Received MQTT message: {"angle": -0.5, "voltage": 8.073, "temperature": 33} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:25,515 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:26,510 INFO Received MQTT message: {"current": 0.4004532, "temperature": 26.20819, "power": 3.230761, "voltage": 8.067762} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:26,511 INFO Retrieved feedback from board:
+2025-07-07 15:29:26,511 INFO Received MQTT message: {"rpm": 965.3675, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:26,511 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:26,511 INFO Received MQTT message: {"angle": -0.75, "voltage": 8.073, "temperature": 33} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:26,512 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:27,509 INFO Received MQTT message: {"current": 0.4173717, "temperature": 26.09595, "power": 3.329545, "voltage": 7.977412} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:27,509 INFO Retrieved feedback from board:
+2025-07-07 15:29:27,509 INFO Received MQTT message: {"rpm": 966.2335, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:27,509 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:27,510 INFO Received MQTT message: {"angle": -0.75, "voltage": 8.073, "temperature": 33} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:27,510 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:27,685 INFO Published to MQTT topic YUKON/ACTION: {"module": "SERVO", "action": "SERVO_SET_ANGLE", "value": 90}
+2025-07-07 15:29:27,685 INFO SERVO1: angle setpoint 90
+2025-07-07 15:29:28,512 INFO Received MQTT message: {"current": 0.5696375, "temperature": 26.06784, "power": 4.551095, "voltage": 7.989459} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:28,512 INFO Retrieved feedback from board:
+2025-07-07 15:29:28,512 INFO Received MQTT message: {"rpm": 964.1944, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:28,512 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:28,512 INFO Received MQTT message: {"angle": 85.0, "voltage": 8.073, "temperature": 33} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:28,512 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:29,507 INFO Received MQTT message: {"current": 0.4173717, "temperature": 26.03976, "power": 3.337088, "voltage": 7.995482} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:29,507 INFO Retrieved feedback from board:
+2025-07-07 15:29:29,507 INFO Received MQTT message: {"rpm": 967.285, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:29,507 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:29,508 INFO Received MQTT message: {"angle": 90.49999, "voltage": 8.073, "temperature": 33} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:29,508 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:29,686 INFO Published to MQTT topic YUKON/ACTION: {"module": "SERVO", "action": "SERVO_SET_ANGLE", "value": 0}
+2025-07-07 15:29:29,686 INFO SERVO1: angle setpoint 0
+2025-07-07 15:29:30,628 INFO Received MQTT message: {"current": 0.4681269, "temperature": 26.26434, "power": 3.751359, "voltage": 8.013553} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:30,628 INFO Retrieved feedback from board:
+2025-07-07 15:29:30,628 INFO Received MQTT message: {"rpm": 965.2719, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:30,629 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:30,629 INFO Received MQTT message: {"angle": 4.25, "voltage": 8.062, "temperature": 33} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:30,629 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:31,508 INFO Received MQTT message: {"current": 0.4004532, "temperature": 25.87119, "power": 3.235585, "voltage": 8.079809} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:31,508 INFO Retrieved feedback from board:
+2025-07-07 15:29:31,509 INFO Received MQTT message: {"rpm": 967.8041, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:31,509 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:31,510 INFO Received MQTT message: {"angle": -0.75, "voltage": 8.073, "temperature": 33} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:31,510 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:32,507 INFO Received MQTT message: {"current": 0.3835348, "temperature": 25.53354, "power": 3.061925, "voltage": 7.983436} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:32,507 INFO Retrieved feedback from board:
+2025-07-07 15:29:32,507 INFO Received MQTT message: {"rpm": 967.8503, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:32,507 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:32,507 INFO Received MQTT message: {"angle": -0.75, "voltage": 8.073, "temperature": 33} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:32,507 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:33,508 INFO Received MQTT message: {"current": 0.4173717, "temperature": 26.18015, "power": 3.367255, "voltage": 8.067762} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:33,508 INFO Retrieved feedback from board:
+2025-07-07 15:29:33,508 INFO Received MQTT message: {"rpm": 966.8945, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:33,508 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:33,508 INFO Received MQTT message: {"angle": -0.75, "voltage": 8.073, "temperature": 34} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:33,508 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:34,508 INFO Received MQTT message: {"current": 0.4004532, "temperature": 26.15207, "power": 3.221113, "voltage": 8.043669} on topic: YUKON/BOARD/FEEDBACK
+2025-07-07 15:29:34,508 INFO Retrieved feedback from board:
+2025-07-07 15:29:34,508 INFO Received MQTT message: {"rpm": 967.4781, "velocityRequest": 1.0} on topic: YUKON/MOTOR1/FEEDBACK
+2025-07-07 15:29:34,508 INFO Retrieved feedback from module: MOTOR1
+2025-07-07 15:29:34,509 INFO Received MQTT message: {"angle": -0.75, "voltage": 8.073, "temperature": 34} on topic: YUKON/SERVO1/FEEDBACK
+2025-07-07 15:29:34,509 INFO Retrieved feedback from module: SERVO1
+2025-07-07 15:29:34,687 INFO Published to MQTT topic YUKON/ACTION: {"module": "MOTOR1", "action": "MOTOR_SET_SPEED", "value": 0.0}
+2025-07-07 15:29:34,687 INFO MOTOR1: disabled

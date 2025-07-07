@@ -10,10 +10,21 @@ yukon.motor1.enable_motor()
 # SIMPLE VELOCITY SETPOINT
 yukon.motor1.set_speed(speed=1.0)
 time.sleep(5)
-yukon.servo1.set_angle(angle=180)
+yukon.servo1.set_angle(angle=90)
 time.sleep(2)
 yukon.servo1.set_angle(angle=0)
 
 time.sleep(5)
 yukon.motor1.disable_motor()
+
+
+#print history
+print("Power history")
+print(yukon.motor1.power_history)
+
+print("RPM history")
+print(yukon.motor1.rpm_history)
+
+print("Angle history")
+print(yukon.servo1.angle_history)
 
